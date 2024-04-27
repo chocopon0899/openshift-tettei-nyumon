@@ -2,22 +2,22 @@
 kind: Template
 apiVersion: v1
 metadata:
-  name: "${NAME}-template"
+  name: "custom-jenkins-agent-template"
 labels:
-  template: "${NAME}-template"
-  app: "${NAME}"
+  template: "custom-jenkins-agent-template"
+  app: "custom-jenkins-agent"
 objects:
 - kind: BuildConfig
   apiVersion: build.openshift.io/v1
   metadata:
-    name: "${NAME}"
+    name: "custom-jenkins-agent"
     labels:
-      name: "${NAME}"
+      name: "custom-jenkins-agent"
   spec:
     output:
       to:
         kind: ImageStreamTag
-        name: "${NAME}:latest"
+        name: "custom-jenkins-agent:latest"
     resources: {}
     strategy:
       type: Docker
@@ -32,7 +32,7 @@ objects:
 - kind: ImageStream
   apiVersion: v1
   metadata:
-    name: "${NAME}"
+    name: "custom-jenkins-agent"
 parameters:
 - name: NAME
   displayName: Name
