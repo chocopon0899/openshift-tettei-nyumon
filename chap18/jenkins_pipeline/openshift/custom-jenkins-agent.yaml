@@ -1,6 +1,5 @@
----
-kind: Template
 apiVersion: v1
+kind: Template
 metadata:
   name: "custom-jenkins-agent-template"
 labels:
