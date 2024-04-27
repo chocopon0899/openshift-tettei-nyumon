@@ -1,5 +1,5 @@
 # OpenShiftの内部レジストリに格納されているjenkins-agent-mavenを活用
-FROM default-route-openshift-image-registry.apps-crc.testing/openshift/jenkins-agent-mvn
+FROM image-registry.openshift-image-registry.svc:5000/openshift/jenkins-agent-maven
 
 ENV PGDG_REPO_URL https://download.postgresql.org/pub/repos/yum/reporpms/EL-8-x86_64/pgdg-redhat-repo-latest.noarch.rpm
 
